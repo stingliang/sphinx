@@ -1,3 +1,6 @@
 [submodule "source"]
 	path = source
 	url = https://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@github.com/stingliang/articles.git
+[submodule "source/articles"]
+	path = source/articles
+	url = https://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@github.com/stingliang/articles.git
