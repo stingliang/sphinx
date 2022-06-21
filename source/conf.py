@@ -14,6 +14,13 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 from recommonmark.transform import AutoStructify
+import sphinx_rtd_theme
+
+# The suffix of source filenames.
+source_parsers = {
+	'.md': 'recommonmark.parser.CommonMarkParser',
+}
+source_suffix = ['.rst', '.md']
 
 
 # -- Project information -----------------------------------------------------
@@ -60,15 +67,23 @@ exclude_patterns = ['articles/README.md']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+# html_theme = 'alabaster'
+html_theme = "sphinx_rtd_theme"
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+# The theme to use for HTML and HTML Help pages.  See the documentation for
+# a list of builtin themes.
+html_theme_options = {'navigation_depth': 3, 'navigation_with_keys': True}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-# The suffix of source filenames.
-source_parsers = {
-	'.md': 'recommonmark.parser.CommonMarkParser',
+# VCS options: https://github.com/stingliang/sphinx.git
+html_context = {
+    "display_github": True, # Integrate GitHub
+    "github_repo": "sphinx", # Repo name
+    "github_user": "stingliang",
+    "github_version": "master", # Version
+    "conf_py_path": "/", # Path in the checkout to the docs root
 }
-source_suffix = ['.rst', '.md']
