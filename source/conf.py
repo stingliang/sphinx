@@ -18,10 +18,9 @@ import sphinx_rtd_theme
 
 # The suffix of source filenames.
 source_parsers = {
-	'.md': 'recommonmark.parser.CommonMarkParser',
+    '.md': 'recommonmark.parser.CommonMarkParser',
 }
 source_suffix = ['.rst', '.md']
-
 
 # -- Project information -----------------------------------------------------
 
@@ -31,7 +30,6 @@ author = 'liangrui'
 
 # The full version, including alpha/beta/rc tags
 release = 'v1.0'
-
 
 # -- General configuration ---------------------------------------------------
 
@@ -61,7 +59,6 @@ language = 'en_US'
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['articles/README.md']
 
-
 # -- Options for HTML output -------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
@@ -81,9 +78,9 @@ html_static_path = ['_static']
 
 # VCS options: https://github.com/stingliang/sphinx.git
 html_context = {
-    "display_github": True, # Integrate GitHub
-    "github_repo": "sphinx", # Repo name
+    "display_github": True,  # Integrate GitHub
+    "github_repo": "sphinx",  # Repo name
     "github_user": "stingliang",
-    "github_version": "master", # Version
-    "conf_py_path": "/", # Path in the checkout to the docs root
+    "github_version": "master",  # Version
+    "conf_py_path": "/",  # Path in the checkout to the docs root
 }
